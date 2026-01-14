@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Slider styles */
+        .slider {
+            width: 100%;
+            height: 100vh; /* Set to 100% of the viewport height */
+            overflow: hidden;
+            margin-bottom: 20px; /* Add space between slider and cards */
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            transition: 0.5s;
+            height: 90%; /* Set the height of the slides to 100% of the slider height */
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%; /* Set to 100% of the slide's container (slider) */
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%; /* Set image width to 100% */
+            height: 100%; /* Set the image to fill the entire slide */
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Gear Middle East Slider</title>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="https://www.topgearmiddleeast.com/cloud/2024/02/16/0pUjhH1z-Artboard-11-1200x900.jpg" alt="Top Gear Middle East Image 1"></div>
+                <div class="slide"><img src="https://www.topgearmiddleeast.com/cloud/2024/02/16/16MCqKfa-Artboard-10-1200x900.jpg" alt="Top Gear Middle East Image 2"></div>
+                <div class="slide"><img src="https://www.topgearmiddleeast.com/cloud/2024/02/16/D1IqJ8Ht-Artboard-17-1200x900.jpg" alt="Top Gear Middle East Image 3"></div>
+            </div>
+            <div class="prev" onclick="plusSlide(-1)">&#10094;</div>
+            <div class="next" onclick="plusSlide(1)">&#10095;</div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+
+        function plusSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>
