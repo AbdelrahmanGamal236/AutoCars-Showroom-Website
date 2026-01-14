@@ -1,7 +1,7 @@
 # Auto Cars - Luxury Showroom Website 
 
 Welcome to the **Auto Cars** repository. This is a premium, responsive landing page designed for a high-end automotive showroom located in New Cairo. The site showcases a vast collection of luxury vehicles, promotes automotive events, and facilitates customer appointments.
-![Page 1](Auto.jpeg)
+![Page 1](Auto.jpg)
 ##  About The Project
 
 **Auto Cars** has been serving the New Cairo community since 2003, offering top-notch vehicles and exceptional customer service. This digital storefront is designed to provide car enthusiasts with an immersive experience, featuring:
